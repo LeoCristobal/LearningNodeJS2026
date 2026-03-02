@@ -1,12 +1,9 @@
 const express = require("express");
 const app = express();
 const tasks = require("./routes/tasks");
-
 const PORT = 8888;
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+app.use(express.json());
 
 app.use("/api/v1/tasks", tasks);
 
