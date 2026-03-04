@@ -1,20 +1,20 @@
 const getAllTasks = (req, res) => {
-  res.send("GET ALL TASKS");
+  res.send("GET ALL TASKS - GET METHOD");
 };
 
 const createTask = (req, res) => {
-  res.send("CREATE TASK");
+  res.json(req.body);
 };
 
 const getTask = (req, res) => {
-  res.send("GET TASK");
+  res.json({ id: req.params.id });
 };
 
 const updateTask = (req, res) => {
-  res.send("UPDATE TASK");
+  res.json({ updating: req.params.id });
 };
 const deleteTask = (req, res) => {
-  res.send("DELETE TASK");
+  res.json({ deleting: req.params.id });
 };
 
 module.exports = {
